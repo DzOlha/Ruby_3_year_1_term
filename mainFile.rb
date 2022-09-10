@@ -51,7 +51,7 @@ print "You entered: x = ", x, "\n"
 print "             a = ", a, "\n"
 print "             b = ", b, "\n"
 
-half = 1/2
+half = 1.0/2.0
 numerator = (6.2 * (10**2.7) * Math.tan(Math::PI - x**3))
 denominator = Math::E + (Math.log(Math.acos((b**3).abs)))**half
 
