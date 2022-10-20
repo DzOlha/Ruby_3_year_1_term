@@ -74,24 +74,24 @@ end
 class PatientGroup 
     def initialize(size)
         @size = size
-        @students =  Array.new(@size)
+        @patients =  Array.new(@size)
         for i in 0..@size-1 do
             si = i.to_s
-            @students[i] = Patient.new(i,"F"+si,"L"+si,"f"+si,"a"+si, i+4000,i+250, "ill_"+si)
+            @patients[i] = Patient.new(i,"F"+si,"L"+si,"f"+si,"a"+si, i+4000,i+250, "ill_"+si)
         end
     end
     def printAll()
-        puts @students
+        puts @patients
     end
     def setDiagnosis(index, diag)
-        @students[index].setDiagnosis(diag)
+        @patients[index].setDiagnosis(diag)
     end
     def patientsWithDiagnosis(diagnosis)
         resultArr = Array.new(0)
         for i in 0..@size-1 do 
-            currDiag = @students[i].getDiagnosis
+            currDiag = @patients[i].getDiagnosis
             if(currDiag === diagnosis) then
-                resultArr.append(@students[i])
+                resultArr.append(@patients[i])
             end 
         end
         if(resultArr.length == 0) then
@@ -104,9 +104,9 @@ class PatientGroup
     def patientsWithNumberCardFromInterval(a, b)
         resultArr = Array.new(0)
         for i in 0..@size-1 do 
-            currNum = @students[i].getNumberMedCard
+            currNum = @patients[i].getNumberMedCard
             if(currNum >= a && currNum <= b) then
-                resultArr.append(@students[i])
+                resultArr.append(@patients[i])
             end 
         end
         if(resultArr.length == 0) then
