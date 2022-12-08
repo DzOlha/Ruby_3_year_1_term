@@ -11,4 +11,10 @@ class Telegram < Contact
     def setTelegram(newTelegram) 
         @telegram = telegram
     end
+
+    def to_s 
+        "ID => " + @id.to_s + "; FirstName => " + @firstName +
+        + "; LastName => " + @lastName + "; " +
+        + "Telegram => " + @telegram;
+    end
 end

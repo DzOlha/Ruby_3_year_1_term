@@ -11,4 +11,9 @@ class PhoneNumber < Contact
     def setPhoneNumber(newPhoneNumber) 
         @phoneNumber = newPhoneNumber
     end
+    def to_s 
+        "ID => " + @id.to_s + "; FirstName => " + @firstName +
+        + "; LastName => " + @lastName + "; " +
+        + "PhoneNumber => " + @phoneNumber;
+    end
 end
